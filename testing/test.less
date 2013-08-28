@@ -1,8 +1,37 @@
 body {
-  padding-top: 50px;
-  
-  .starter-template {
-    padding: 40px 15px;
-  }
+  padding-top: 40px;
+}
 
+div#pipes {
+  margin: 5px 0 0 0;
+  display: block;
+  
+  div.pipeBlock {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    border: 1px dotted #000;
+    width: 145px;
+    display: inline-block;
+    margin: 20px 2px 0 0;
+    padding: 2px;
+    float: left;
+    
+    div.headder {
+      background-color: #ECECEC;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    
+    div.customer {
+      min-height: 50px;
+      border: 1px solid #cfcfcf;
+      margin-top: 2px;
+    }
+    
+    &:hover {
+      background-color: rgb(238, 255, 143);
+    }
+    
+  }
 }

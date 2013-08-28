@@ -1,0 +1,21 @@
+{
+  "version": [1,0,0],
+  "user": {},
+  "stages": [
+    { "name": "Spacer", "id": 0, "displayName": "Spacer", "order": 0 },
+    { "name": "Pending Review", "id": 1, "displayName": "Pending Review", "order": 1 },
+    { "name": "Reviewing", "id": 2, "displayName": "Reviewing", "order": 2 },
+    { "name": "Meets Spec", "id": 3, "displayName": "Meets Spec", "order": 3 },
+    { "name": "In Development", "id": 4, "displayName": "In Development", "order": 4 },
+    { "name": "In Review", "id": 5, "displayName": "In Review", "order": 5 },
+    { "name": "In Testing", "id": 6, "displayName": "In Testing", "order": 6 },
+    { "name": "Waiting Go Live", "id": 7, "displayName": "Waiting Go Live", "order": 7 }
+  ],
+  "sources": [
+    { "name": "Customer A", "id": 1, "priority": 8 },
+    { "name": "Customer B", "id": 2, "priority": 1 },
+    { "name": "Customer C", "id": 3, "priority": 4 },
+    { "name": "Customer D", "id": 4, "priority": 10 },
+    { "name": "Customer E", "id": 5, "priority": 2 }
+  ]
+}

@@ -1,0 +1,5 @@
+NOTE:
+This folder structure is for mocking requests while we refine the JSON structore.
+Please keep this doc up to date with what each file is used for.
+
+./001/init.json               Called on startup (initializes the users pipeline)
