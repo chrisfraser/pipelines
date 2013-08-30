@@ -9,20 +9,21 @@
 
     <title>Pipelines</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap-3.0.0/css/bootstrap.css" rel="stylesheet">
-    <link href="bootstrap-3.0.0/css/bootstrap-theme.css" rel="stylesheet">
-    <link rel="stylesheet/less" type="text/css" href="test.less" />
+    <!-- CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="stylesheets/pipelines.less" />
     
-    <script src="jquery-1.10.2.js"></script>
-    <script src="less-1.4.1.min.js"></script>
-    <script src="bootstrap-3.0.0/js/bootstrap.js"></script>
-    <script src="angular.js"></script>
-    <script src="test.js"></script>
+    <!-- JS -->
+    <script src="vendor/jquery/jquery-1.10.2.js"></script>
+    <script src="vendor/less/less-1.4.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="js/pipelines.js"></script>
   </head>
 
   <body ng-app>
-
+    <!-- Navbar -->
     <div class="navbar navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -37,22 +38,18 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </div>
 
     <div class="container" ng-controller="Pipelines">
-
       <div class="starter-template">
         <h1>Pipelines</h1>
         <p class="lead">Holder for now...</p>
         <button class="btn btn-success" ng-click="test()">Setup Pipelines</button>
       </div>
-      
       <div id="pipes"></div>
-
-    </div><!-- /.container -->
-    
+    </div>
     
   </body>
 </html>

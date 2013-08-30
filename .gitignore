@@ -13,4 +13,5 @@ results
 
 npm-debug.log
 
-testing/web.config
+planning/web.config
+planning/node_modules

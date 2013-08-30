@@ -27,7 +27,7 @@ var Pipelines = function($scope, $http) {
   };
   
   $scope.test = function() {
-    var result = $http.get('/json/001/init.json');
+    var result = $http.get('json/001/init.json');
     result.success(function(data){
       internals.customers = data.sources;
       
