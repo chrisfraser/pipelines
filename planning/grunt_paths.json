@@ -1,0 +1,10 @@
+{
+  "src": {
+    "less": "src/less",
+    "js": "src/js"
+  },
+  "dst": {
+    "less": "public/stylesheets",
+    "js": "public/js"
+  }
+}
