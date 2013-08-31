@@ -18,7 +18,9 @@ module.exports = function (grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
       },
       default: {
-        '<%= plPaths.dst.js %>/pipelines.js': ['<%= plPaths.src.js %>/pipelines.js']
+        files: {
+          '<%= plPaths.dst.js %>/pipelines.min.js': ['<%= plPaths.src.js %>/pipelines.js']
+        }
       }
     },
 

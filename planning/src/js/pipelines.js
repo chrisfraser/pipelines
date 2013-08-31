@@ -1,6 +1,6 @@
 // still messing about here
 
-var Pipelines = function($scope, $http) {
+var Pipelines = ['$scope', '$http', function($scope, $http) {
   var internals = {
     $container: $('div#pipes'),
     pipeWidth: 150,
@@ -69,5 +69,4 @@ var Pipelines = function($scope, $http) {
     
     
   }
-}
-
+}]
