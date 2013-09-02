@@ -1,0 +1,16 @@
+{
+  "src": {
+    "less": "planning/src/less",
+    "js": "planning/src/js",
+    "angular": "thirdparty/angularjs"
+  },
+  "dst": {
+    "less": "planning/public/stylesheets",
+    "css": "planning/public/stylesheets",
+    "js": "planning/public/js"
+  },
+  "misc": {
+    "angularFiles": "thirdparty/angularjs/angularFiles.js",
+    "bootstrapDist": "thirdparty/bootstrap/dist"
+  }
+}

@@ -1,5 +1,13 @@
 // http://integralist.co.uk/Grunt-Boilerplate.html
 
+var basePaths = require('./grunt_paths.json');
+var files = require('./thirdparty/angularjs/angularFiles.js').files;
+
+var angularSrcFiles = new Array();
+for(var i = 0; i < files.angularSrc.length; i++) {
+  angularSrcFiles.push(basePaths.src.angular + '/' + files.angularSrc[i]);
+}
+
 module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -8,7 +16,8 @@ module.exports = function (grunt) {
     clean: {
       // https://npmjs.org/package/grunt-contrib-clean
       default: [
-        '<%= plPaths.dst.less %>/pipelines.min.css'
+        '<%= plPaths.dst.less %>/pipelines.min.css',
+        '<%= plPaths.dst.js %>/angular.min.js'
       ]
     },
     
@@ -19,11 +28,25 @@ module.exports = function (grunt) {
       },
       default: {
         files: {
-          '<%= plPaths.dst.js %>/pipelines.min.js': ['<%= plPaths.src.js %>/pipelines.js']
+          '<%= plPaths.dst.js %>/pipelines.min.js': ['<%= plPaths.src.js %>/pipelines.js'],
+          '<%= plPaths.dst.js %>/angular.min.js': [angularSrcFiles],
         }
       }
     },
-
+    
+    copy: {
+      // https://github.com/gruntjs/grunt-contrib-copy
+      default: {
+        files: [
+          { flatten: true, src: ['<%= plPaths.misc.bootstrapDist %>/css/bootstrap.min.css'], dest: '<%= plPaths.dst.css %>/bootstrap.min.css' },
+          { flatten: true, src: ['<%= plPaths.misc.bootstrapDist %>/css/bootstrap-theme.min.css'], dest: '<%= plPaths.dst.css %>/bootstrap-theme.min.css' },
+          { flatten: true, src: ['<%= plPaths.misc.bootstrapDist %>/js/bootstrap.min.js'], dest: '<%= plPaths.dst.js %>/bootstrap.min.js' }   
+                   
+                   
+        ]
+      }
+    },
+    
     less: {
       // https://npmjs.org/package/grunt-contrib-less
       options: {
@@ -58,7 +81,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   //grunt.registerTask('release', ['clean', 'less', 'uglify', 'assemble', 'copy']);
-  grunt.registerTask('default', ['clean', 'uglify', 'less']);
+  grunt.registerTask('default', ['clean', 'uglify', 'less', 'copy']);
 };
 
 // http://chrisawren.com/posts/Advanced-Grunt-tooling
